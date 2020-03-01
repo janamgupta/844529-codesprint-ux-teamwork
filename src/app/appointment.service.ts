@@ -9,8 +9,6 @@ export class AppointmentService {
 
   constructor(private httpClient : HttpClient) { }
   placeAppointment(appointment:Appointment):Observable<any>{
-    console.log("service");
-    console.log(appointment);
     return this.httpClient.post(`http://localhost:3000/appointment`,appointment);
     }
   getAppointments():Observable<any>{
